@@ -2,8 +2,10 @@
 export const appStyles = {
   wrapper: {
     maxWidth: "420px",
+    width: "calc(100% - 40px)", // 20px margin от всяка страна
     margin: "20px auto",
     padding: "20px",
+    boxSizing: "border-box", // Включва padding в ширината
     border: "4px solid #2ea8ff",
     borderRadius: "20px",
     fontFamily: "Arial",
@@ -11,11 +13,17 @@ export const appStyles = {
   title: { textAlign: "center" },
   subtitle: { textAlign: "center", marginBottom: "20px" },
   section: { marginBottom: "20px" },
-  row: { display: "flex", gap: "10px" },
+  row: { 
+    display: "flex", 
+    gap: "10px",
+    flexWrap: "wrap", // Позволява wrap на малки екрани
+  },
   input: {
     flex: 1,
+    minWidth: "120px", // Минимална ширина за input полето
     padding: "10px",
     fontSize: "16px",
+    boxSizing: "border-box",
   },
   result: {
     marginTop: "10px",
