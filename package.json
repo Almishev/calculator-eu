@@ -5,13 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base ./"
+    "build": "vite build --base ./",
+    "babel": "babel . --out-dir dist --extensions .js,.jsx"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.0.8"
   }
