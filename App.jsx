@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import CurrencySwitch from "./components/CurrencySwitch";
+import { appStyles as styles } from "./styles";
 
 const RATE = 1.95583;
 
@@ -80,73 +82,5 @@ function App() {
     </div>
   );
 }
-
-function CurrencySwitch({ value, onChange }) {
-  return (
-    <div style={styles.switch}>
-      <button
-        style={value === "BGN" ? styles.activeBtn : styles.btn}
-        onClick={() => onChange("BGN")}
-      >
-        BGN
-      </button>
-      <button
-        style={value === "EUR" ? styles.activeBtn : styles.btn}
-        onClick={() => onChange("EUR")}
-      >
-        EUR
-      </button>
-    </div>
-  );
-}
-
-const styles = {
-  wrapper: {
-    maxWidth: "420px",
-    margin: "20px auto",
-    padding: "20px",
-    border: "4px solid #2ea8ff",
-    borderRadius: "20px",
-    fontFamily: "Arial",
-  },
-  title: { textAlign: "center" },
-  subtitle: { textAlign: "center", marginBottom: "20px" },
-  section: { marginBottom: "20px" },
-  row: { display: "flex", gap: "10px" },
-  input: {
-    flex: 1,
-    padding: "10px",
-    fontSize: "16px",
-  },
-  switch: { display: "flex" },
-  btn: {
-    padding: "10px",
-    border: "1px solid #ccc",
-    background: "#fff",
-    cursor: "pointer",
-  },
-  activeBtn: {
-    padding: "10px",
-    border: "1px solid #007bff",
-    background: "#007bff",
-    color: "#fff",
-    cursor: "pointer",
-  },
-  result: {
-    marginTop: "10px",
-    padding: "15px",
-    fontSize: "28px",
-    fontWeight: "bold",
-    color: "green",
-    border: "1px solid green",
-    borderRadius: "10px",
-    display: "inline-block",
-  },
-  footer: {
-    marginTop: "20px",
-    fontSize: "13px",
-    color: "#555",
-  },
-};
 
 export default App;
